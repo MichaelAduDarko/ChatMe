@@ -13,6 +13,7 @@
 		4725A2C7242A6A7C0006D70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4725A2C5242A6A7C0006D70B /* Main.storyboard */; };
 		4725A2C9242A6A7E0006D70B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4725A2C8242A6A7E0006D70B /* Assets.xcassets */; };
 		4725A2CC242A6A7E0006D70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4725A2CA242A6A7E0006D70B /* LaunchScreen.storyboard */; };
+		4725A2DA242A6BE80006D70B /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2D9242A6BE80006D70B /* ConversationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4725A2C8242A6A7E0006D70B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4725A2CB242A6A7E0006D70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4725A2CD242A6A7E0006D70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4725A2D9242A6BE80006D70B /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,12 @@
 		4725A2BE242A6A7C0006D70B /* ChatMe */ = {
 			isa = PBXGroup;
 			children = (
+				4725A2D8242A6B2B0006D70B /* Model */,
+				4725A2D7242A6B290006D70B /* View */,
+				4725A2D6242A6B260006D70B /* ViewModel */,
+				4725A2D5242A6B240006D70B /* Controller */,
+				4725A2D4242A6B1E0006D70B /* API */,
+				4725A2D3242A6B180006D70B /* Utilities */,
 				4725A2BF242A6A7C0006D70B /* AppDelegate.swift */,
 				4725A2C1242A6A7C0006D70B /* SceneDelegate.swift */,
 				4725A2C3242A6A7C0006D70B /* ViewController.swift */,
@@ -65,6 +73,49 @@
 				4725A2CD242A6A7E0006D70B /* Info.plist */,
 			);
 			path = ChatMe;
+			sourceTree = "<group>";
+		};
+		4725A2D3242A6B180006D70B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4725A2D4242A6B1E0006D70B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4725A2D5242A6B240006D70B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4725A2D9242A6BE80006D70B /* ConversationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4725A2D6242A6B260006D70B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4725A2D7242A6B290006D70B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4725A2D8242A6B2B0006D70B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				4725A2C4242A6A7C0006D70B /* ViewController.swift in Sources */,
 				4725A2C0242A6A7C0006D70B /* AppDelegate.swift in Sources */,
+				4725A2DA242A6BE80006D70B /* ConversationController.swift in Sources */,
 				4725A2C2242A6A7C0006D70B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
