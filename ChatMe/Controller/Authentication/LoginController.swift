@@ -11,6 +11,9 @@ import UIKit
 class LoginController: UIViewController {
     
     //MARK:- Properties
+    
+    private var viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(systemName: "bubble.right")
@@ -19,16 +22,16 @@ class LoginController: UIViewController {
     }()
     
     private lazy var emailContainerView: UIView = {
-          return InputContainerView(image: #imageLiteral(resourceName: "email"),
-                                           textField: emailTextField )
+        return InputContainerView(image: #imageLiteral(resourceName: "email"),
+                                  textField: emailTextField )
         
     }()
     
     
     private lazy var passwordContainerView: InputContainerView = {
-           return InputContainerView(image: #imageLiteral(resourceName: "password"),
-                                     textField: passwordTextField )
-       }()
+        return InputContainerView(image: #imageLiteral(resourceName: "password"),
+                                  textField: passwordTextField )
+    }()
     
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
@@ -38,16 +41,18 @@ class LoginController: UIViewController {
         button.backgroundColor = .mainBlueTintColor
         button.setTitleColor(.white, for: .normal)
         button.setHeight(height: 50)
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
     private let emailTextField = CustomTextField(placholder: "Email")
- 
+    
     private let passwordTextField: CustomTextField = {
         let tf = CustomTextField(placholder: "Password")
         tf.isSecureTextEntry = true
-         return tf
-       }()
+        return tf
+    }()
     
     private let dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
@@ -71,12 +76,40 @@ class LoginController: UIViewController {
     }
     
     //MARK:- Selectors
+    
+    @objc func handleLogin(){
+        print("123456")
+    }
+    
+    
+    
+    
+    
     @objc func handleShowSignUp(){
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
     }
-
+    
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        checkFormStatus()
+    }
+    
     //MARK:- Helpers
+    
+    func checkFormStatus(){
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .systemBlue
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = .mainBlueTintColor
+        }
+    }
     
     func configureUI(){
         navigationController?.navigationBar.isHidden = true
@@ -105,7 +138,10 @@ class LoginController: UIViewController {
                                      paddingLeft: 32,
                                      paddingRight: 32)
         
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
+    
     
 }
 
