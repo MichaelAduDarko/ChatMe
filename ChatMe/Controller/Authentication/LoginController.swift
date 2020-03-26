@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol AuthenticationControllerProtocol {
+    func checkFormStatus()
+}
+
+
 class LoginController: UIViewController {
     
     //MARK:- Properties
@@ -98,18 +103,8 @@ class LoginController: UIViewController {
         }
         checkFormStatus()
     }
-    
+
     //MARK:- Helpers
-    
-    func checkFormStatus(){
-        if viewModel.formIsValid {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = .systemBlue
-        } else {
-            loginButton.isEnabled = false
-            loginButton.backgroundColor = .mainBlueTintColor
-        }
-    }
     
     func configureUI(){
         navigationController?.navigationBar.isHidden = true
@@ -145,4 +140,14 @@ class LoginController: UIViewController {
     
 }
 
-
+extension LoginController: AuthenticationControllerProtocol {
+    func checkFormStatus(){
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .systemBlue
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = .mainBlueTintColor
+        }
+    }
+}
