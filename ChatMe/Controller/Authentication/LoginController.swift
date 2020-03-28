@@ -138,7 +138,7 @@ class LoginController: UIViewController , UITextFieldDelegate {
     func configureUI(){
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
-        view.backgroundColor = .black
+        view.backgroundColor = .backgroundColor
         
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)

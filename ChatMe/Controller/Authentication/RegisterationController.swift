@@ -165,7 +165,7 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
     //MARK:- Helpers
     
     func configureUI(){
-        view.backgroundColor = .black
+        view.backgroundColor = .backgroundColor
         
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view)

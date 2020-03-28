@@ -16,6 +16,15 @@ class ConversationController: UIViewController {
     //MARK:- Properties
     private let tableView = UITableView()
     
+    private let  newMessageButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.backgroundColor = .mainBlueTintColor
+        button.tintColor = .white
+        button.imageView?.setDimensions(height: 24, width: 24)
+        button.addTarget(self, action: #selector(showNewMessage), for: .touchUpInside)
+        return button
+    }()
     //MARK:- LifeCycle
     
     override func viewDidLoad() {
@@ -29,6 +38,12 @@ class ConversationController: UIViewController {
        logOut()
     }
     
+    @objc func showNewMessage() {
+       let contoller = NewMessageController()
+        let nav = UINavigationController(rootViewController: contoller)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
+    }
     //MARK:-API
     
     func authenticateUser(){
@@ -69,6 +84,12 @@ class ConversationController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain,
                                                            target: self, action: #selector(showProfile))
         
+        view.addSubview(newMessageButton)
+        newMessageButton.setDimensions(height: 56, width: 56)
+        newMessageButton.layer.cornerRadius = 56 / 2
+        newMessageButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 16,
+                                paddingRight: 24)
+        
     }
     
     func configureTableView(){
@@ -90,7 +111,7 @@ class ConversationController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .systemBlue
+        appearance.backgroundColor = .mainBlueTintColor
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
@@ -117,7 +138,6 @@ extension ConversationController: UITableViewDataSource {
         
     }
 }
-
 
 extension ConversationController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
