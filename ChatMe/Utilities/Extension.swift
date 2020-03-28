@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 
 extension UIView {
@@ -91,3 +92,19 @@ extension UIColor {
     static let mainBlueTintColor = UIColor.rgb(red: 17, green: 154, blue: 237)
 }
 
+
+extension UIViewController {
+    static  let hud = JGProgressHUD(style: .dark)
+    
+    func  showLoader(_ show:Bool, withText text: String? = "Loading"){
+        view.endEditing(true)
+        UIViewController.hud.textLabel.text = text
+       
+        if show {
+            UIViewController.hud.show(in: view)
+        } else{
+            UIViewController.hud.dismiss()
+        }
+        
+    }
+}
