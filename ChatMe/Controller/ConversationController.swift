@@ -42,6 +42,7 @@ class ConversationController: UIViewController {
     func logOut(){
         do {
             try Auth.auth().signOut()
+            presentLoginScreen()
         } catch  {
             print("DEBUG: Error Signnig out")
         }
