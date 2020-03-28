@@ -14,12 +14,13 @@ private let reuseIdentifier = "ConversationCell"
 class ConversationController: UIViewController {
     
     //MARK:- Properties
+    
     private let tableView = UITableView()
     
     private let  newMessageButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "plus"), for: .normal)
-        button.backgroundColor = .mainBlueTintColor
+        button.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
         button.tintColor = .white
         button.imageView?.setDimensions(height: 24, width: 24)
         button.addTarget(self, action: #selector(showNewMessage), for: .touchUpInside)
@@ -92,6 +93,7 @@ class ConversationController: UIViewController {
         
     }
     
+   
     func configureTableView(){
         tableView.backgroundColor = .white
         tableView.rowHeight = 80

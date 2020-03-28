@@ -13,7 +13,19 @@ private let reuseIdentifier = "UserCell"
 class NewMessageController: UITableViewController {
     
     //MARK:- Properties
-    
+    private lazy var actionButton: UIButton = {
+           let button = UIButton(type: .system)
+           button.backgroundColor = .systemPink
+           button.setTitle("Cancel", for: .normal)
+           button.titleLabel?.textAlignment = .center
+           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+           button.setTitleColor(.white, for: .normal)
+           
+           button.frame = CGRect(x: 0, y: 0, width: 64, height: 32)
+           button.layer.cornerRadius = 32 / 2
+           button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)
+           return button
+       }()
     
     //MARK:- Lifecycle
     
@@ -30,8 +42,9 @@ class NewMessageController: UITableViewController {
     
     func configureUI() {
         configureNavigationBar(withTitle: "Messages", prefersLargeTitles: false)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleDismissal))
-        
+
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleDismissal))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: actionButton)
         tableView.tableFooterView = UIView()
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 80
@@ -50,5 +63,4 @@ extension NewMessageController {
         return cell
         
     }
-    
 }
