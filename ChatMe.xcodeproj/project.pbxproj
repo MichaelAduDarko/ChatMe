@@ -20,10 +20,13 @@
 		4725A2E3242A8EDC0006D70B /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2E2242A8EDC0006D70B /* InputContainerView.swift */; };
 		4725A2E5242ABDBC0006D70B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2E4242ABDBC0006D70B /* CustomTextField.swift */; };
 		4725A2E7242ADB8F0006D70B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2E6242ADB8F0006D70B /* LoginViewModel.swift */; };
+		47654A1F242EF4FB00A66244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */; };
 		47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */; };
+		5B98024E956E2C2886AF5A69 /* Pods_ChatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4379D1EF4AEA3245D511EF41 /* Pods_ChatMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4379D1EF4AEA3245D511EF41 /* Pods_ChatMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4725A2BC242A6A7C0006D70B /* ChatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4725A2BF242A6A7C0006D70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4725A2C1242A6A7C0006D70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +42,10 @@
 		4725A2E2242A8EDC0006D70B /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		4725A2E4242ABDBC0006D70B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4725A2E6242ADB8F0006D70B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		5852B3E2BD0C01A5392A67D8 /* Pods-ChatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMe.debug.xcconfig"; path = "Target Support Files/Pods-ChatMe/Pods-ChatMe.debug.xcconfig"; sourceTree = "<group>"; };
+		A94778AF8464FF5725A07487 /* Pods-ChatMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMe.release.xcconfig"; path = "Target Support Files/Pods-ChatMe/Pods-ChatMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B98024E956E2C2886AF5A69 /* Pods_ChatMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,8 @@
 			children = (
 				4725A2BE242A6A7C0006D70B /* ChatMe */,
 				4725A2BD242A6A7C0006D70B /* Products */,
+				A8516165450F31B019AFEB09 /* Pods */,
+				A14136618683E78F8C1D29AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +93,7 @@
 				4725A2C5242A6A7C0006D70B /* Main.storyboard */,
 				4725A2C8242A6A7E0006D70B /* Assets.xcassets */,
 				4725A2CA242A6A7E0006D70B /* LaunchScreen.storyboard */,
+				47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */,
 				4725A2CD242A6A7E0006D70B /* Info.plist */,
 			);
 			path = ChatMe;
@@ -155,6 +165,24 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		A14136618683E78F8C1D29AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4379D1EF4AEA3245D511EF41 /* Pods_ChatMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8516165450F31B019AFEB09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5852B3E2BD0C01A5392A67D8 /* Pods-ChatMe.debug.xcconfig */,
+				A94778AF8464FF5725A07487 /* Pods-ChatMe.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4725A2D0242A6A7E0006D70B /* Build configuration list for PBXNativeTarget "ChatMe" */;
 			buildPhases = (
+				7902CCA35F53414686471C24 /* [CP] Check Pods Manifest.lock */,
 				4725A2B8242A6A7C0006D70B /* Sources */,
 				4725A2B9242A6A7C0006D70B /* Frameworks */,
 				4725A2BA242A6A7C0006D70B /* Resources */,
+				9C33B54D73CB1BFA284113C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,12 +244,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				4725A2CC242A6A7E0006D70B /* LaunchScreen.storyboard in Resources */,
+				47654A1F242EF4FB00A66244 /* GoogleService-Info.plist in Resources */,
 				4725A2C9242A6A7E0006D70B /* Assets.xcassets in Resources */,
 				4725A2C7242A6A7C0006D70B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7902CCA35F53414686471C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C33B54D73CB1BFA284113C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatMe/Pods-ChatMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatMe/Pods-ChatMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatMe/Pods-ChatMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4725A2B8242A6A7C0006D70B /* Sources */ = {
@@ -378,6 +451,7 @@
 		};
 		4725A2D1242A6A7E0006D70B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5852B3E2BD0C01A5392A67D8 /* Pods-ChatMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +470,7 @@
 		};
 		4725A2D2242A6A7E0006D70B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94778AF8464FF5725A07487 /* Pods-ChatMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

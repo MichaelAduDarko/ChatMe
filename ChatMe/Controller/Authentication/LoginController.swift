@@ -12,8 +12,7 @@ protocol AuthenticationControllerProtocol {
     func checkFormStatus()
 }
 
-
-class LoginController: UIViewController {
+class LoginController: UIViewController , UITextFieldDelegate {
     
     //MARK:- Properties
     
@@ -26,12 +25,21 @@ class LoginController: UIViewController {
         return iv
     }()
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "CHAT ME"
+        label.font = UIFont(name: "Optima-bold", size: 45)
+        label.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        label.textAlignment = .center
+        label.layer.masksToBounds = false
+        return label
+    }()
+    
     private lazy var emailContainerView: UIView = {
         return InputContainerView(image: #imageLiteral(resourceName: "email"),
                                   textField: emailTextField )
         
     }()
-    
     
     private lazy var passwordContainerView: InputContainerView = {
         return InputContainerView(image: #imageLiteral(resourceName: "password"),
@@ -77,18 +85,21 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+       
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+
+        return true
+    }
     //MARK:- Selectors
     
     @objc func handleLogin(){
         print("123456")
     }
-    
-    
-    
-    
     
     @objc func handleShowSignUp(){
         let controller = RegistrationController()
@@ -116,15 +127,20 @@ class LoginController: UIViewController {
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop:  32)
         iconImage.setDimensions(height: 120, width: 120)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView,
+        let stack = UIStackView(arrangedSubviews: [titleLabel,emailContainerView,
                                                    passwordContainerView,
                                                    loginButton])
         stack.axis = .vertical
         stack.spacing = 16
         
+        
         view.addSubview(stack)
-        stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor,  right: view.rightAnchor,
-                     paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        stack.anchor(top: iconImage.bottomAnchor,
+                     left: view.leftAnchor,
+                     right: view.rightAnchor,
+                     paddingTop: 32,
+                     paddingLeft: 32,
+                     paddingRight: 32)
         
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.anchor(left: view.leftAnchor,

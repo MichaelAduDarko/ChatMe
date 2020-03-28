@@ -1,0 +1,6 @@
+framework module Pods_ChatMe {
+  umbrella header "Pods-ChatMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

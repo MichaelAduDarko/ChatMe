@@ -21,3 +21,4 @@ struct RegistrationViewModel : AuthenticationProtocol {
             && username?.isEmpty == false
     }
 }
+
