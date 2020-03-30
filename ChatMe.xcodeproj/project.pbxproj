@@ -22,6 +22,8 @@
 		4725A2E7242ADB8F0006D70B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2E6242ADB8F0006D70B /* LoginViewModel.swift */; };
 		473868F4242F326D002B32C5 /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473868F3242F326D002B32C5 /* NewMessageController.swift */; };
 		473868F6242F394D002B32C5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473868F5242F394D002B32C5 /* UserCell.swift */; };
+		4738690424318BE1002B32C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690324318BE1002B32C5 /* User.swift */; };
+		4738690624318C85002B32C5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690524318C85002B32C5 /* Service.swift */; };
 		47654A1F242EF4FB00A66244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */; };
 		47654A21242F106B00A66244 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47654A20242F106B00A66244 /* AuthService.swift */; };
 		47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */; };
@@ -47,6 +49,8 @@
 		4725A2E6242ADB8F0006D70B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		473868F3242F326D002B32C5 /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		473868F5242F394D002B32C5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		4738690324318BE1002B32C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4738690524318C85002B32C5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47654A20242F106B00A66244 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				47654A20242F106B00A66244 /* AuthService.swift */,
+				4738690524318C85002B32C5 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 		4725A2D8242A6B2B0006D70B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4738690324318BE1002B32C5 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				4725A2E1242A7E4C0006D70B /* Extension.swift in Sources */,
 				473868F6242F394D002B32C5 /* UserCell.swift in Sources */,
 				4725A2DF242A79A00006D70B /* RegisterationController.swift in Sources */,
+				4738690424318BE1002B32C5 /* User.swift in Sources */,
+				4738690624318C85002B32C5 /* Service.swift in Sources */,
 				4725A2DA242A6BE80006D70B /* ConversationController.swift in Sources */,
 				4725A2C2242A6A7C0006D70B /* SceneDelegate.swift in Sources */,
 				4725A2DD242A79880006D70B /* LoginController.swift in Sources */,
