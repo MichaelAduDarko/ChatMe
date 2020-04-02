@@ -89,14 +89,9 @@ class LoginController: UIViewController , UITextFieldDelegate {
         configureUI()
         emailTextField.delegate = self
         passwordTextField.delegate = self
-       
+        dismissKey()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-
-        return true
-    }
     //MARK:- Selectors
     
     @objc func handleLogin(){
@@ -132,7 +127,7 @@ class LoginController: UIViewController , UITextFieldDelegate {
         }
         checkFormStatus()
     }
-
+    
     //MARK:- Helpers
     
     func configureUI(){
@@ -169,6 +164,22 @@ class LoginController: UIViewController , UITextFieldDelegate {
         
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
+    
+    func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false;
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     

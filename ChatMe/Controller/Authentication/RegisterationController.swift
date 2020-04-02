@@ -104,12 +104,12 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
                 self.showLoader(false)
                 return
             }
-              
+            
             self.showLoader(false)
             self.dismiss(animated: true, completion: nil)
         }
     }
-        
+    
     @objc func textDidChange(sender: UITextField){
         if sender == emailTextField {
             viewModel.email = sender.text
@@ -154,15 +154,25 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
         passwordTextField.delegate = self
         fullnameTextField.delegate = self
         usernameTextField.delegate = self
+        dismissKey()
+    }
+   
+    //MARK:- Helpers
+    
+    func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false;
+        view.addGestureRecognizer(tap)
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-
         return true
     }
-    //MARK:- Helpers
     
     func configureUI(){
         view.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
@@ -206,9 +216,9 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
-       
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide),
-                                                      name: UIResponder.keyboardWillHideNotification, object: nil)
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
