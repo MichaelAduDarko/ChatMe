@@ -27,6 +27,8 @@
 		473869082434290E002B32C5 /* ChatController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 473869072434290D002B32C5 /* ChatController .swift */; };
 		4738690A2434317A002B32C5 /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473869092434317A002B32C5 /* CustomInputAccessoryView.swift */; };
 		4738690C243582E6002B32C5 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690B243582E6002B32C5 /* MessageCell.swift */; };
+		4738690E2435892D002B32C5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690D2435892D002B32C5 /* Message.swift */; };
+		4738691024358C7A002B32C5 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690F24358C7A002B32C5 /* MessageViewModel.swift */; };
 		47654A1F242EF4FB00A66244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */; };
 		47654A21242F106B00A66244 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47654A20242F106B00A66244 /* AuthService.swift */; };
 		47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */; };
@@ -57,6 +59,8 @@
 		473869072434290D002B32C5 /* ChatController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatController .swift"; sourceTree = "<group>"; };
 		473869092434317A002B32C5 /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
 		4738690B243582E6002B32C5 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		4738690D2435892D002B32C5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4738690F24358C7A002B32C5 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47654A20242F106B00A66244 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				47C8691B242C4E98002E8F46 /* Authentication */,
+				4738690F24358C7A002B32C5 /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				4738690324318BE1002B32C5 /* User.swift */,
+				4738690D2435892D002B32C5 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				473869082434290E002B32C5 /* ChatController .swift in Sources */,
 				47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */,
 				4725A2E3242A8EDC0006D70B /* InputContainerView.swift in Sources */,
+				4738691024358C7A002B32C5 /* MessageViewModel.swift in Sources */,
 				47654A21242F106B00A66244 /* AuthService.swift in Sources */,
 				4725A2C0242A6A7C0006D70B /* AppDelegate.swift in Sources */,
 				4725A2E1242A7E4C0006D70B /* Extension.swift in Sources */,
@@ -339,6 +346,7 @@
 				4725A2DD242A79880006D70B /* LoginController.swift in Sources */,
 				4725A2E7242ADB8F0006D70B /* LoginViewModel.swift in Sources */,
 				4725A2E5242ABDBC0006D70B /* CustomTextField.swift in Sources */,
+				4738690E2435892D002B32C5 /* Message.swift in Sources */,
 				473868F4242F326D002B32C5 /* NewMessageController.swift in Sources */,
 				4738690A2434317A002B32C5 /* CustomInputAccessoryView.swift in Sources */,
 			);

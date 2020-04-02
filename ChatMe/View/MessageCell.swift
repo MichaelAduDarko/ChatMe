@@ -11,6 +11,15 @@ import UIKit
 class MessageCell: UICollectionViewCell {
     
     //MARK:- Properties
+    
+    var message: Message? {
+        didSet { configure()}
+    }
+    
+    var bubbleLeftAnchor: NSLayoutConstraint!
+     var bubbleRightAnchor: NSLayoutConstraint!
+    
+    
     private let profileImageview: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleToFill
@@ -19,14 +28,13 @@ class MessageCell: UICollectionViewCell {
         return iv
     }()
     
-    private let textview: UITextView = {
+    private let textView: UITextView = {
         let tv = UITextView()
         tv.backgroundColor = .clear
         tv.font = .systemFont(ofSize: 16)
         tv.isScrollEnabled = false
         tv.isEditable = false
         tv.textColor = .white
-        tv.text = "Hey wassup Mike"
         return tv
     }()
     
@@ -49,11 +57,17 @@ class MessageCell: UICollectionViewCell {
         
         addSubview(bubbleContainer)
         bubbleContainer.layer.cornerRadius = 12
-        bubbleContainer.anchor(top: topAnchor, left: profileImageview.rightAnchor, paddingLeft: 12)
+        bubbleContainer.anchor(top: topAnchor)
         bubbleContainer.widthAnchor.constraint(lessThanOrEqualToConstant: 250).isActive = true
         
-        addSubview(textview)
-        textview.anchor(top: bubbleContainer.topAnchor,
+        bubbleLeftAnchor = bubbleContainer.leftAnchor.constraint(equalTo: profileImageview.rightAnchor, constant: 12)
+        bubbleLeftAnchor.isActive = false
+        
+        bubbleRightAnchor = bubbleContainer.rightAnchor.constraint(equalTo: rightAnchor, constant: -12)
+        bubbleRightAnchor.isActive = false
+        
+        addSubview(textView)
+        textView.anchor(top: bubbleContainer.topAnchor,
                         left: bubbleContainer.leftAnchor,
                         bottom: bubbleContainer.bottomAnchor,
                         right: bubbleContainer.rightAnchor,
@@ -65,5 +79,21 @@ class MessageCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK:- Helpers
+    
+    func configure() {
+        guard let message = message else { return}
+        let viewModel = MessagViewModel(message: message)
+        
+        bubbleContainer.backgroundColor = viewModel.messageBackgroundColor
+        textView.textColor = viewModel.messagetextColor
+        textView.text = message.text
+        
+        bubbleLeftAnchor.isActive = viewModel.leftAnchorActive
+        bubbleRightAnchor.isActive = viewModel.righAnchorActive
+        
+        profileImageview.isHidden = viewModel.shouldHideProfileImage
     }
 }
