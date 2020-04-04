@@ -154,12 +154,12 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
         passwordTextField.delegate = self
         fullnameTextField.delegate = self
         usernameTextField.delegate = self
-        dismissKey()
+        tapOutsideToDismissKeyboard()
     }
    
     //MARK:- Helpers
     
-    func dismissKey() {
+    func tapOutsideToDismissKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false;
         view.addGestureRecognizer(tap)
@@ -205,7 +205,6 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
                                         paddingLeft: 32,
                                         paddingRight: 32)
     }
-    
     
     
     func configureNotifactionObservers() {

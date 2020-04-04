@@ -89,7 +89,7 @@ class LoginController: UIViewController , UITextFieldDelegate {
         configureUI()
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        dismissKey()
+        tapOutsideToDismissKeyboard()
     }
     
     //MARK:- Selectors
@@ -167,7 +167,7 @@ class LoginController: UIViewController , UITextFieldDelegate {
     }
     
     
-    func dismissKey() {
+    func tapOutsideToDismissKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false;
         view.addGestureRecognizer(tap)
