@@ -30,6 +30,8 @@
 		4738690E2435892D002B32C5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690D2435892D002B32C5 /* Message.swift */; };
 		4738691024358C7A002B32C5 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738690F24358C7A002B32C5 /* MessageViewModel.swift */; };
 		4738691224393116002B32C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738691124393116002B32C5 /* Constants.swift */; };
+		47386914243A9553002B32C5 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47386913243A9553002B32C5 /* ConversationCell.swift */; };
+		47386916243A9BA6002B32C5 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47386915243A9BA6002B32C5 /* ConversationViewModel.swift */; };
 		47654A1F242EF4FB00A66244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */; };
 		47654A21242F106B00A66244 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47654A20242F106B00A66244 /* AuthService.swift */; };
 		47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */; };
@@ -63,6 +65,8 @@
 		4738690D2435892D002B32C5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4738690F24358C7A002B32C5 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		4738691124393116002B32C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		47386913243A9553002B32C5 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		47386915243A9BA6002B32C5 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		47654A1E242EF4FB00A66244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47654A20242F106B00A66244 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		47C86919242C4E7E002E8F46 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			children = (
 				47C8691B242C4E98002E8F46 /* Authentication */,
 				4738690F24358C7A002B32C5 /* MessageViewModel.swift */,
+				47386915243A9BA6002B32C5 /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				473868F5242F394D002B32C5 /* UserCell.swift */,
 				473869092434317A002B32C5 /* CustomInputAccessoryView.swift */,
 				4738690B243582E6002B32C5 /* MessageCell.swift */,
+				47386913243A9553002B32C5 /* ConversationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,12 +350,14 @@
 				4725A2DF242A79A00006D70B /* RegisterationController.swift in Sources */,
 				4738690424318BE1002B32C5 /* User.swift in Sources */,
 				4738690C243582E6002B32C5 /* MessageCell.swift in Sources */,
+				47386916243A9BA6002B32C5 /* ConversationViewModel.swift in Sources */,
 				4738690624318C85002B32C5 /* Service.swift in Sources */,
 				4725A2DA242A6BE80006D70B /* ConversationController.swift in Sources */,
 				4725A2C2242A6A7C0006D70B /* SceneDelegate.swift in Sources */,
 				4725A2DD242A79880006D70B /* LoginController.swift in Sources */,
 				4725A2E7242ADB8F0006D70B /* LoginViewModel.swift in Sources */,
 				4725A2E5242ABDBC0006D70B /* CustomTextField.swift in Sources */,
+				47386914243A9553002B32C5 /* ConversationCell.swift in Sources */,
 				4738690E2435892D002B32C5 /* Message.swift in Sources */,
 				473868F4242F326D002B32C5 /* NewMessageController.swift in Sources */,
 				4738690A2434317A002B32C5 /* CustomInputAccessoryView.swift in Sources */,
