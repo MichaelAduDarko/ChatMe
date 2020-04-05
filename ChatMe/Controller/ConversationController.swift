@@ -16,6 +16,7 @@ class ConversationController: UIViewController {
     //MARK:- Properties
     
     private let tableView = UITableView()
+    private var conversations = [Conversation]()
     
     private let  newMessageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -32,6 +33,7 @@ class ConversationController: UIViewController {
         super.viewDidLoad()
         configureUI()
         authenticateUser()
+        fetchConversation()
     }
     
     //MARK:- Selectors
@@ -47,6 +49,13 @@ class ConversationController: UIViewController {
         present(nav, animated: true, completion: nil)
     }
     //MARK:-API
+    
+    func fetchConversation(){
+        Service.fetchConversation { conversations in
+            self.conversations = conversations
+            self.tableView.reloadData()
+        }
+    }
     
     func authenticateUser(){
         if Auth.auth().currentUser?.uid == nil {
@@ -113,12 +122,12 @@ class ConversationController: UIViewController {
 
 extension ConversationController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = "Text Cell"
+        cell.textLabel?.text = conversations[indexPath.row].message.text
         return cell
         
     }
