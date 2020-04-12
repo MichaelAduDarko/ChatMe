@@ -8,9 +8,20 @@
 
 import UIKit
 
+protocol ProfileHeaderDelegate: class {
+    func dissmissController()
+}
+
 class ProfileHeader: UIView {
     
     //MARK:- Properties
+    
+    var user: User? {
+        didSet { populateUserData() }
+    }
+    
+    weak var delegate: ProfileHeaderDelegate?
+    
     private let dismissButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "xmark"), for: .normal)
@@ -66,11 +77,21 @@ class ProfileHeader: UIView {
     //MARK: Selectors
     
     @objc func handleDissmal() {
-        
+        delegate?.dissmissController()
     }
     
     
     //MARK:- Helpers
+    
+    func populateUserData() {
+        guard let user = user else { return }
+        
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = "@" + user.username
+        
+        guard let url = URL(string: user.profileImageUrl) else { return } 
+        profileImageView.sd_setImage(with: url)
+    }
     
     func configureUI(){
         configureGradientLayer()
