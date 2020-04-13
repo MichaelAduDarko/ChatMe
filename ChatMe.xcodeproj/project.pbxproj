@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		471D86DD2442B7070081E05A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D86DC2442B7070081E05A /* ProfileController.swift */; };
 		471D86DF2442B8A10081E05A /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D86DE2442B8A10081E05A /* ProfileHeader.swift */; };
+		471D86E12443FFCC0081E05A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D86E02443FFCC0081E05A /* ProfileViewModel.swift */; };
+		471D86E32444016F0081E05A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D86E22444016F0081E05A /* ProfileCell.swift */; };
 		4725A2C0242A6A7C0006D70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2BF242A6A7C0006D70B /* AppDelegate.swift */; };
 		4725A2C2242A6A7C0006D70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2C1242A6A7C0006D70B /* SceneDelegate.swift */; };
 		4725A2C4242A6A7C0006D70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A2C3242A6A7C0006D70B /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		4379D1EF4AEA3245D511EF41 /* Pods_ChatMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471D86DC2442B7070081E05A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		471D86DE2442B8A10081E05A /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		471D86E02443FFCC0081E05A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		471D86E22444016F0081E05A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		4725A2BC242A6A7C0006D70B /* ChatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4725A2BF242A6A7C0006D70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4725A2C1242A6A7C0006D70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				47C8691B242C4E98002E8F46 /* Authentication */,
 				4738690F24358C7A002B32C5 /* MessageViewModel.swift */,
 				47386915243A9BA6002B32C5 /* ConversationViewModel.swift */,
+				471D86E02443FFCC0081E05A /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				4738690B243582E6002B32C5 /* MessageCell.swift */,
 				47386913243A9553002B32C5 /* ConversationCell.swift */,
 				471D86DE2442B8A10081E05A /* ProfileHeader.swift */,
+				471D86E22444016F0081E05A /* ProfileCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				471D86DD2442B7070081E05A /* ProfileController.swift in Sources */,
 				4725A2C4242A6A7C0006D70B /* ViewController.swift in Sources */,
 				4738691224393116002B32C5 /* Constants.swift in Sources */,
+				471D86E12443FFCC0081E05A /* ProfileViewModel.swift in Sources */,
 				473869082434290E002B32C5 /* ChatController .swift in Sources */,
 				47C8691A242C4E7E002E8F46 /* RegistrationViewModel.swift in Sources */,
 				4725A2E3242A8EDC0006D70B /* InputContainerView.swift in Sources */,
@@ -355,6 +362,7 @@
 				4725A2E1242A7E4C0006D70B /* Extension.swift in Sources */,
 				473868F6242F394D002B32C5 /* UserCell.swift in Sources */,
 				4725A2DF242A79A00006D70B /* RegisterationController.swift in Sources */,
+				471D86E32444016F0081E05A /* ProfileCell.swift in Sources */,
 				4738690424318BE1002B32C5 /* User.swift in Sources */,
 				4738690C243582E6002B32C5 /* MessageCell.swift in Sources */,
 				47386916243A9BA6002B32C5 /* ConversationViewModel.swift in Sources */,
