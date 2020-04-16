@@ -85,7 +85,7 @@ extension ProfileController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: resuseIdentifier , for: indexPath) as! ProfileCell
-
+        
         let viewModel = ProfileViewModel(rawValue: indexPath.row)
         cell.viewModel = viewModel
         cell.accessoryType = .disclosureIndicator
