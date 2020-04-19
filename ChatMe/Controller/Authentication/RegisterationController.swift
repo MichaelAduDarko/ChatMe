@@ -12,7 +12,7 @@ import Firebase
 class RegistrationController: UIViewController , UITextFieldDelegate{
     
     //MARK:- Properties
-    
+     
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
     
@@ -102,8 +102,8 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
         
         AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
-                print("DEBUG: \(error.localizedDescription)")
                 self.showLoader(false)
+                self.showError(error.localizedDescription)
                 return
             }
             

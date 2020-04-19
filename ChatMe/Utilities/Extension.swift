@@ -99,7 +99,7 @@ extension UIViewController {
     func  showLoader(_ show:Bool, withText text: String? = "Loading"){
         view.endEditing(true)
         UIViewController.hud.textLabel.text = text
-       
+        
         if show {
             UIViewController.hud.show(in: view)
         } else{
@@ -117,7 +117,7 @@ extension UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-         
+        
         navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
         navigationItem.title = title
         navigationController?.navigationBar.tintColor = .white
@@ -125,4 +125,10 @@ extension UIViewController {
         navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
     }
     
+    func showError(_ errorMessage: String){
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
 }
