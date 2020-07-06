@@ -12,7 +12,8 @@ import Firebase
 class RegistrationController: UIViewController , UITextFieldDelegate{
     
     //MARK:- Properties
-     
+    
+    
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
     
@@ -159,7 +160,7 @@ class RegistrationController: UIViewController , UITextFieldDelegate{
         usernameTextField.delegate = self
         tapOutsideToDismissKeyboard()
     }
-   
+    
     //MARK:- Helpers
     
     func tapOutsideToDismissKeyboard() {
